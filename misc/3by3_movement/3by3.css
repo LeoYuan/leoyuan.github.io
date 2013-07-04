@@ -1,0 +1,80 @@
+.block_wrapper {
+	margin: 200px auto;
+	width: 280px;
+	height: 280px;
+	position: relative;
+}
+
+.block {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background-color: cyan;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.block span {
+	display: block;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	left: 45%;
+}
+
+.block:hover {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+div#r1c1 {
+	top: 10px;
+	left: 10px;
+}
+
+div#r1c2 {
+	top: 10px;
+	left: 100px;
+}
+
+div#r1c3 {
+	top: 10px;
+	left: 190px;
+}
+
+div#r2c1 {
+	top: 100px;
+	left: 10px;
+}
+
+div#r2c2 {
+	top: 100px;
+	left: 100px;
+}
+
+div#r2c3 {
+	top: 100px;
+	left: 190px;
+}
+
+div#r3c1 {
+	top: 190px;
+	left: 10px;
+}
+
+div#r3c2 {
+	top: 190px;
+	left: 100px;
+}
+
+div#r3c3 {
+	top: 190px;
+	left: 190px;
+}
+
+.unselectable {
+  -moz-user-select:none;
+  -webkit-user-select:none;
+}
+
