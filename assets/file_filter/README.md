@@ -1,4 +1,1 @@
-misc
-====
-
-Just some code snippets.
+### 完成同一功能的同步与异步写法
