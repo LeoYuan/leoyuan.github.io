@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./cookie.css">
+    <script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../lib/sea-debug.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<div class="cookie-wrapper">
+    <div class="cookie-oper-wrapper">
+        <p class="cookie-oper-tit cookie-center">Cookie Workshop</p>
+        <div class="cookie-oper-zone">
+            <ul>
+                <li>
+                    <span class="cookie-text">Cookie Name: </span>
+                    <input id="cookieName" type="text" class="cookie-input" placeholder="Input cookie name"/>        
+                </li>
+                <li>
+                    <span class="cookie-text">Cookie Value: </span>
+                    <input id="cookieValue" type="text" class="cookie-input" placeholder="Input cookie value"/>        
+                </li>
+                <li>
+                    <span class="cookie-text-long">Cookie Expires: </span>
+                    <input id="cookieExpires" type="text" class="cookie-input" placeholder="Input expires data(in days)"/>        
+                </li>
+                <li class="cookie-center">
+                    <button id="add" class="cookie-btn">Add</button>
+                </li>
+            <ul>
+        </div>
+    </div>
+    <div class="cookie-list-wrapper">
+        <!-- <p class="cookie-list-tit cookie-center">Session Cookie List</p>
+        <div class="cookie-session">
+            No Session Cookies.
+        </div> -->
+        <p class="cookie-list-tit cookie-center">Cookie List</p>
+        <div class="cookie-persistent">
+            No Persistent Cookies.
+        </div>
+    </div>        
+</div>
+<script type="text/javascript">
+    seajs.use('./index');
+</script>
+</body>
+</html>
