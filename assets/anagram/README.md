@@ -1,2 +1,2 @@
 ### 字母排列
-[Demo](http://leoyuan.github.io/assets/anagram/anagram.html)
+<a href="http://leoyuan.github.io/assets/anagram/anagram.html" target="_blank">Demo</a>
