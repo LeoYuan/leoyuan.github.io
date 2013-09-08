@@ -1,2 +1,2 @@
 ### Promise模式的参考实现
-[Demo](http://leoyuan.github.io/assets/promise/test_promise.html)
+<a href="http://leoyuan.github.io/assets/promise/test_promise.html" target="_blank">Demo</a>
