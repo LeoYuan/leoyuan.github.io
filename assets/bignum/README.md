@@ -1,2 +1,2 @@
 ### 大数据的加减乘除运算
-[Demo](http://leoyuan.github.io/assets/bignum/bignum.html)
+<a href="http://leoyuan.github.io/assets/bignum/bignum.html" target="_blank">Demo</a>
