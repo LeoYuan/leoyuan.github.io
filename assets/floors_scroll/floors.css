@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin: 0 auto 20px;
+    border-radius: 5px;
+}
+
+p {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    width: 1000px;
+    height: 80px;
+    background-color: cyan;
+    border: 1px solid grey;
+}
+
+#floorWrapper {
+    margin-bottom: 1000px;
+}
+
+.floor {
+    width: 800px;
+    background-color: cyan;
+    border: 1px dashed green;
+}
+
+.floor p {
+    border: 1px solid grey;
+    background-color: lightBlue;
+}
+
+#floorShortcut {
+    position: fixed;
+    border: 1px dashed green;
+    top: 50px;
+    right: 80px;
+}
+
+#floorShortcut ul {
+    margin: 0;
+    padding: 0;
+}
+
+#floorShortcut ul li {
+    list-style: none;
+    padding: 3px 5px;
+}
+
+#floorShortcut ul li a {
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    width: 50px;
+    height: 20px;
+    padding: 2px 3px;
+}
+
+#floorShortcut ul li.current a {
+    background-color: cyan;
+}
+
+#floorShortcut ul li a:link,
+#floorShortcut ul li a:visited {
+    color: black;
+}
+
+#floorShortcut ul li a:hover {
+    background-color: cyan;
+}
+
+#floorShortcut ul li a:active {
+    background-color: cyan;
+}
