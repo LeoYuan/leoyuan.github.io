@@ -20,7 +20,7 @@ define(function (require, exports, module) {
           msgList.push(msg);
           if (index === taskLen - 1 || err) {
             if (typeof onComplete === "function") {
-              onComplete(null, msgList);
+              onComplete(err, msgList);
             }
             return;
           }
@@ -49,9 +49,9 @@ define(function (require, exports, module) {
       return function(err, msg) {
         msgList[index] = msg;
         count++;
-        if (count === taskLen) {
+        if (count === taskLen || err) {
           if (typeof onComplete === "function") {
-            onComplete(null, msgList);
+            onComplete(err, msgList);
           }
         }
       }
@@ -74,7 +74,7 @@ define(function (require, exports, module) {
           prevArgs = Array.prototype.slice.call(arguments, 1);
           if (index === taskLen - 1 || err) {
             if (typeof onComplete === "function") {
-              onComplete(null, prevArgs);
+              onComplete(err, prevArgs);
             }
             return;
           }
