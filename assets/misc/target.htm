@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html class="htmlCls">
+<head>
+    <title>jQuery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        body {
+            margin: 20px;
+            padding: 5px;
+        }
+        .divWrapperCls {
+            float: left;
+            height: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid cyan;
+        }
+        #wrapper2 p {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 10px solid #ccc;
+            margin: 10px;
+            background-color: lightblue;
+        }
+        .divCls {
+            width: 200px;
+            height: 100px;
+            padding: 10px;
+            border: 10px solid #ccc;
+            margin: 10px;
+            background-color: lightblue;
+        }
+        .divCls p {
+            padding: 5px;
+            border: 3px solid #ddd;
+        }
+
+        .divCls p span {
+            border: 2px solid #ddd;   
+        }
+
+        table {
+            border: 1px solid #ddd;
+        }
+
+        table tr td {
+            width: 200px;
+        }
+    </style>
+</head>
+<body class="bodyCls">
+<script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+$(function() {
+
+    function record(from, thisObj, target, currentTarget, relatedTarget, delegateTarget) {
+        var thisNodeName = thisObj ? thisObj.className : '',
+            targetNodeName = target ? target.className : '',
+            cTargetNodeName = currentTarget ? currentTarget.className : '',
+            rTargetNodeName = relatedTarget ? relatedTarget.className : '',
+            dTargetNodeName = delegateTarget ? delegateTarget.className : '';
+
+        var $tr = $('<tr/>');
+        $tr.append($('<td/>', {
+            text: from
+        })).append($('<td/>', {
+            text: thisNodeName
+        })).append($('<td/>', {
+            text: targetNodeName
+        })).append($('<td/>', {
+            text: cTargetNodeName
+        })).append($('<td/>', {
+            text: rTargetNodeName
+        })).append($('<td/>', {
+            text: dTargetNodeName
+        }));
+        $('table').append($tr);
+    }
+
+    $('#wrapper1').on('click', '#div1', function(e) {
+        record('on click', this, e.target, e.currentTarget, e.relatedTarget, e.delegateTarget);
+    })
+
+    $('#wrapper1').delegate('#div1', 'click', function(e) {
+        record('delegate click', this, e.target, e.currentTarget, e.relatedTarget, e.delegateTarget);
+    })
+
+    $('#wrapper2').click(function(e) {
+        record('direct binding', this, e.target, e.currentTarget, e.relatedTarget, e.delegateTarget);
+    }).mouseover(function(e) {
+        console.log('mouseover: ' + e.relatedTarget.className);
+    }).mouseout(function(e) {
+        console.log('mouseout: ' + e.relatedTarget.className);
+    }).mouseenter(function(e) {
+        console.log('mouseenter: ' + e.relatedTarget.className);
+    }).mouseleave(function(e) {
+        console.log('mouseleave: ' + e.relatedTarget.className);
+    })
+
+
+});
+</script>
+<div id="wrapper1" class="divWrapperCls">
+    <div id="div1" class='divCls'>
+        div1
+        <p class="pCls">
+            p within div1
+            <br/>
+            <span class="spanCls">
+                span within p
+            </span>
+        </p>
+    </div>
+</div>
+
+<div id="wrapper2" class="divWrapperCls">
+    <p id="p2" class="pCls">p2</p>
+</div>
+
+<table>
+    <tr>
+        <td>from</td>
+        <td>this</td>
+        <td>target</td>
+        <td>currentTarget</td>
+        <td>relatedTarget</td>
+        <td>delegateTarget</td>
+    </tr>
+</table>
+</body>
+</html>
