@@ -1,4 +1,11 @@
 /*
+  todo:
+  1. then支持多次事件注册；
+  2. 支持pipe方法；
+  3. 支持静态的then方法；
+  4. 事件机制从Promise类中移除；
+*/
+/*
   promise模式的参考实现
  */
 define(function (require, exports, module) {
